@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="angularVirtualScrollingApp">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Angular.js Virtual Scrolling</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <style>
+        .container {
+            margin: 0 auto;
+            width: 50%;
+            overflow: auto;
+            max-height: 300px;
+            min-height: 50px;
+            background-color: hsla(210, 75%, 50%, 0.2);
+        }
+
+        .row {
+            padding: 10px 20px;
+            text-align: center;
+            padding: 10px 15px;
+            border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+            background-color: beige;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <body ng-controller="MainController">
+
+        <div vs-repeat class="container">
+            <div ng-repeat="item in items" class="row">
+                {{item.description}}
+            </div>
+        </div>
+
+    </body>
+
+</html>
